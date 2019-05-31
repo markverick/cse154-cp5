@@ -1,9 +1,9 @@
 /* global $ */
 /*
     Name: Mark Theeranantachai
-    Date: May 18, 2019
+    Date: May 30, 2019
     Section: CSE 154 AF
-    A javascript for index.html, assignment for CP4.
+    A javascript for index.html, assignment for CP5.
     A showcase and role picker for selecting Dota Hero with animation and
     tooltip. The data are fetched from dota.php.
 */

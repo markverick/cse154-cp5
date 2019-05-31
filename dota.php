@@ -1,12 +1,11 @@
 <?php
 /*
     Name: Mark Theeranantachai
-    Date: May 18, 2019
+    Date: May 30, 2019
     Section: CSE 154 AF
-    A PHP webservice for CP5
+    A PHP webservice for CP5: A hero showcase for Dota Heroes by using SQL
 */
     include "common.php";
-    
     
     if (isset($_GET["type"])) {
         $type = $_GET["type"];
@@ -26,12 +25,12 @@
      */
     function list_heroes($type) {
         header("Content-type: text/plain");
+        $query = "SELECT shortname, localized_name FROM Heroes WHERE primary_attr = '{$type}'";
         $db = get_PDO();
-        $rows = $db->query("SELECT shortname, localized_name FROM Heroes WHERE primary_attr = '{$type}'");
+        $rows = $db->query($query);
         while ($row = $rows->fetch()) {
             echo $row["shortname"] . ":" . $row["localized_name"] . "\n";
         }
-        
     }
     
     /**

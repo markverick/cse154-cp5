@@ -1,3 +1,8 @@
+-- Name: Mark Theeranantachai
+-- Date: May 30, 2019
+-- Section: CSE 154 AF
+-- An SQL database for Dota's Heroes, containing its basic information and attributes.
+
 DROP TABLE IF EXISTS Heroes;
 CREATE TABLE Heroes(
   id              INTEGER       NOT NULL PRIMARY KEY,
